@@ -1,0 +1,100 @@
+.welcome h3 {
+	font-size: 50px;
+	font-weight: bold;
+	padding: 30px;
+	background-color: rgba(58, 16, 16, 0.5);
+}
+
+.container p {
+	font-size: 70px;
+	font-weight: bold;
+	color: #FFF;
+	font-variant: small-caps;
+}
+
+body {
+	background-image: url(https://images.unsplash.com/photo-1503792501406-2c40da09e1e2?auto=format&fit=crop&w=1052&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+	background-size: cover;
+	
+}
+.row button {
+	font-weight: bold;
+	font-size: 50px;
+	padding: 30px;
+}
+
+.container {
+	padding-top:20px;
+}
+
+
+.fa {
+	padding: 15px;
+}
+
+.paper:hover {
+	background-color: orange;
+	border: 5px solid #FFF;
+	border-radius: 20px;
+}
+
+.rock:hover {
+	background-color: blue;
+	border: 5px solid #FFF;
+	border-radius: 20px;
+}
+
+.scissors:hover {
+	background-color: green;
+	border: 5px solid #FFF;
+	border-radius: 20px;
+}
+
+
+.col-xs-2 {
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.col-xs-5 {
+	font-size: 30px;
+}
+
+.red {
+	
+	font-size: 150px !important;
+	color: red!important;
+	padding: 10px 100px!important;
+}
+
+
+.data {
+	color: #FFF;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.one {
+	font-size: 65px !important;
+	
+}
+
+.win h3, .lose h3 {
+	background-color: #2b09ed;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 60px;
+}
+
+
+.white p {
+	color:#FFF;
+	font-weight: bold;
+	font-size: 70px;
+}
+
+#js-computerResult {
+	font-weight: bold;
+	font-size: 40px;
+	color: red;
+}

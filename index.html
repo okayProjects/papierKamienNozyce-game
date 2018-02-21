@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+  </head>
+  <body>
+  	<div id="js-playerWinsElement" class="container win">
+      
+  		<h3 class="text-center animated infinite flash">CONGRATULATIOS!<br> You've won!!!</h3>
+	</div>
+	<div id="js-computerWinsElement" class="container lose">
+    
+		<h3 class="text-center animated infinite flash">Upppps! Compuetr wins!<br>But cheer up - better luck next time!</h3>
+	</div>
+    <div id="js-welcomeElement" class="container welcome">
+  		<h3 class="text-center">
+    		<p class="intro animated fadeInRight">Welcome to the game</p>
+    		<span class="label label-default animated infinite flash">Rock</span>
+    		<span class="label label-info animated infinite flash">Paper</span>
+    		<span class="label label-danger animated infinite flash">Scissors</span>
+    		<audio id='js-opening-sound' autoplay><source src="sound/open.mp3" type="audio/mp3"></audio>
+
+  		</h3>
+	</div>
+	<div id="js-newGameElement" class="container">
+  		<div class="row text-center">
+    		<button  id="js-newGameButton" class="animated fadeInLeft btn btn-default">
+      			New game
+    		</button>
+  		</div>
+	</div>
+
+	<div id="js-playerPickElement" class="container ">
+
+  		<div class="row text-center play">
+  			
+  		
+    		<button id="js-playerPick_rock" class="btn pick rock animated bounceInLeft">
+      			<span class="badge one ">
+        			<i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+      			</span>
+      			Rock
+    		</button>
+    		<button id="js-playerPick_paper"  class="btn pick paper animated fadeInUp">
+      			<span class="badge one">
+      			<i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+      			</span>
+      			Paper
+    		</button>
+    		<button id="js-playerPick_scissors"  class="btn pick scissors animated bounceInRight">
+      			<span class="badge one">
+      			<i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+      			</span>
+      			Scissors
+    		</button>
+  		</div>
+	</div>
+	<div id="js-resultsTableElement" class="container">
+  		<div class="row">
+    		<div class="col-xs-5 text-center  animated bounceInRight">
+
+      			<span id="js-playerPoints" class="badge red">
+      			0
+      			</span>
+      			
+    		</div>
+    		<div class="col-xs-2 text-center" class="white">
+      			<p id='js-versus'>VS</p>
+      			<video id='js-countDown' width="200px" height="300px" class='animated infinite pulse'><source src="video/ruready.mp4" type="video/mp4"></video>
+      			<video id='js-playerWinsVideo' width="200px" height="200px"><source src="video/playerWins.mp4" type="video/mp4"></video>
+      			<video id='js-computerWinsVideo' width="200px" height="200px"><source src="video/computerWins.mp4" type="video/mp4"></video>
+    		</div>
+    		<div class="col-xs-5 text-center score animated bounceInLeft">
+      			<span id="js-computerPoints" class="badge red">
+      			0
+      			</span>
+      			
+    		</div>
+  		</div>
+  		<div class="row">
+    		<div class="col-xs-5 text-center">
+      			<span id="js-playerName" class="data">
+      			Player Name
+      			</span>
+    		</div>
+    		<div class="col-xs-2"></div>
+    		<div class="col-xs-5 text-center">
+    			<span class="data">Computer</span>
+    		</div>
+    		<div class="col-xs-5 text-center">
+      			<span id="js-playerPick" class="data">
+        			<span>Player selection</span>
+      			</span>
+    		</div>
+    		<div class="col-xs-2"></div>
+    		<div class="col-xs-5 text-center">
+      				<span id="js-computerPick" class="text-center data">
+      				Computer selection</span>
+
+    		</div>
+  		</div>
+  		<div class="row">
+    		<div class="col-xs-5 text-center">
+      			<span id="js-playerResult" class="data">
+        			Player Score
+      			</span>
+    		</div>
+    		<div class="col-xs-2"></div>
+    		<div class="col-xs-5 text-center">
+      			<span id="js-computerResult" class="text-center data animated infinite flash">
+        			Computer Score
+      			</span>
+    		</div>
+  		</div>
+  		<div id='js-sound-efects'>
+  			<audio id='js-rock-soundEfect'><source src="sound/rock.mp3" type="audio/mp3"></audio>
+  			<audio id='js-paper-soundEfect'><source src="sound/paper.mp3" type="audio/mp3"></audio>
+  			<audio id='js-scissors-soundEfect'><source src="sound/scissors.mp3" type="audio/mp3"></audio>
+  			
+  			<audio id='js-playerSoundTwo'><source src="sound/applause2.mp3" type="audio/mp3"></audio>
+  			<audio id='js-playerSoundThree'><source src="sound/applause3.mp3" type="audio/mp3"></audio>
+  			<audio id='js-playerSoundFour'><source src="sound/wow.mp3" type="audio/mp3"></audio>
+  			<audio id='js-playerSoundFive'><source src="sound/positive.mp3" type="audio/mp3"></audio>
+  			<audio id='js-computerSoundOne'><source src="sound/laughter5.mp3" type="audio/mp3"></audio>
+  			<audio id='js-computerSoundTwo'><source src="sound/laughter3.mp3" type="audio/mp3"></audio>
+  			<audio id='js-computerSoundThree'><source src="sound/laughter2.mp3" type="audio/mp3"></audio>
+  			<audio id='js-computerSoundFour'><source src="sound/laughter1.mp3" type="audio/mp3"></audio>
+  			<audio id='js-computerSoundFive'><source src="sound/laughter.mp3" type="audio/mp3"></audio>
+  		</div>
+	</div>
+	
+  <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>
