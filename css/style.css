@@ -1,3 +1,9 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 .welcome h3 {
 	font-size: 50px;
 	font-weight: bold;
@@ -15,7 +21,7 @@
 body {
 	background-image: url(https://images.unsplash.com/photo-1503792501406-2c40da09e1e2?auto=format&fit=crop&w=1052&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
 	background-size: cover;
-	
+	/* max-height: 100vh; */
 }
 .row button {
 	font-weight: bold;
@@ -61,7 +67,6 @@ body {
 }
 
 .red {
-	
 	font-size: 150px !important;
 	color: red!important;
 	padding: 10px 100px!important;
@@ -84,6 +89,18 @@ body {
 	color: #FFF;
 	font-weight: bold;
 	font-size: 60px;
+}
+
+.white {
+	position: relative;
+}
+
+.white video {
+	position: absolute;
+	left: 0;
+	top: 20%;
+	height: 100px;
+	width: 100%;
 }
 
 
